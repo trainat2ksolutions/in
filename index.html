@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2K Solutions - Empowering Tech Careers</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
-    
     <style>
         /* General Styles */
         body {
@@ -45,37 +43,32 @@
             text-align: center;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            margin-right: 20px; /* Space between logo and nav links */
-        }
-
-        .logo img {
-            height: 50px; /* Fixed height for the logo */
-        }
-
         .navbar {
             display: flex;
-            justify-content: flex-start;
+            flex-direction: column; /* Stack links vertically for mobile */
+            justify-content: center;
+            align-items: center;
             list-style: none;
+            margin-top: 20px; /* Space between logo and links */
         }
 
         .navbar li {
-            margin: 0 15px;
+            margin: 10px 0; /* Space between menu items */
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
+            font-size: 18px;
         }
 
         .navbar a:hover {
             color: #3498db;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-bottom: 15px; /* Space between logo and navbar links */
         }
 
         /* Hero Section */
@@ -112,8 +105,8 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            margin-right: 30px;
             object-fit: cover;
+            margin-right: 30px;
         }
 
         .founder-details {
@@ -145,6 +138,7 @@
         .service img {
             width: 100px;
             height: 100px;
+            object-fit: cover;
             margin-bottom: 10px;
         }
 
@@ -215,30 +209,78 @@
             color: #3498db;
         }
 
-        /* Responsive Design */
+        /* General Image Styles */
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%; /* Ensures the image doesn't stretch beyond its container */
+            display: block; /* Ensures no space below images */
+        }
+
+        /* Hero Image */
+        .hero img {
+            width: 100%; /* Full width for hero image */
+            height: auto;
+            max-height: 400px; /* Ensure the hero image does not stretch too much */
+        }
+
+        /* Services Section Images */
+        .service img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* Adjustments for mobile */
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
+            /* Hero section on mobile: make it smaller to fit the screen properly */
+            .hero img {
+                max-height: 250px;
             }
 
-            .navbar li {
-                margin: 10px 0;
+            /* Founder photo resizing on mobile */
+            .founder-photo {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+                margin-right: 0; /* Remove margin on smaller screens */
+                margin-left: 0; /* Remove margin on smaller screens */
             }
 
+            /* Founder Section: Stack photo and details vertically */
             .founder-info {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .founder-photo {
-                margin-bottom: 20px;
+            /* Services Section on mobile */
+            .service img {
+                width: 80px;
+                height: 80px;
             }
 
+            /* Adjust contact form on mobile */
             .contact form {
                 width: 80%;
             }
+
+            /* Navbar adjustments on mobile */
+            .navbar {
+                flex-direction: column; /* Stack menu items vertically on small screens */
+                align-items: center; /* Center items on mobile */
+            }
+
+            .navbar li {
+                margin: 10px 0;
+                font-size: 16px; /* Smaller font size for mobile */
+            }
+
+            .logo img {
+                height: 40px; /* Make logo smaller on mobile */
+            }
         }
+
     </style>
 </head>
 <body>
@@ -247,7 +289,7 @@
 <header>
     <nav>
         <div class="logo">
-            <img src="2klogo.jpg" alt="2K Solutions Logo"><!-- Logo image -->
+            <img src="2klogo.jpg" alt="2K Solutions Logo">
         </div>
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
@@ -300,7 +342,7 @@
 <!-- Services Section -->
 <section id="services" class="services">
     <div class="container">
-        <center><h2>Our Services</h2></center>
+        <h2>Our Services</h2>
         <div class="service">
             <img src="software.jpg" alt="Software Training">
             <h3>Software Training</h3>
@@ -320,22 +362,20 @@
 </section>
 
 <!-- Courses Section -->
-<center>
-    <section id="courses" class="courses">
-        <div class="container">
-            <h2>Our Courses</h2>
-            <p>Explore our diverse range of software courses designed to elevate your skills and career.</p>
-            <ul>
-                <li>Software Development</li>
-                <li>Web Development</li>
-                <li>Data Analytics</li>
-                <li>Business Applications</li>
-                <li>Cloud Computing</li>
-            </ul>
-            <a href="#contact" class="cta-btn">Enroll Now</a>
-        </div>
-    </section>
-</center>
+<section id="courses" class="courses">
+    <div class="container">
+        <h2>Our Courses</h2>
+        <p>Explore our diverse range of software courses designed to elevate your skills and career.</p>
+        <ul>
+            <li>Software Development</li>
+            <li>Web Development</li>
+            <li>Data Analytics</li>
+            <li>Business Applications</li>
+            <li>Cloud Computing</li>
+        </ul>
+        <a href="#contact" class="cta-btn">Enroll Now</a>
+    </div>
+</section>
 
 <!-- About Us Section -->
 <section id="about" class="about">
