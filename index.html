@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2K Solutions - Empowering Tech Careers</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2, h3 {
+            color: #2c3e50;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Navbar Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px; /* Space between logo and nav links */
+        }
+
+        .logo img {
+            height: 50px; /* Fixed height for the logo */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        /* Founder Section */
+        .founder {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .founder h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .founder-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .founder-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 30px;
+            object-fit: cover;
+        }
+
+        .founder-details {
+            max-width: 600px;
+        }
+
+        .founder-details h3 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .founder-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 50px 0;
+            background-color: #ecf0f1;
+        }
+
+        .service {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .service img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Courses Section */
+        .courses {
+            padding: 50px 0;
+        }
+
+        .courses ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .courses li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .contact label {
+            margin-bottom: 5px;
+        }
+
+        .contact input, .contact textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+
+            .founder-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .founder-photo {
+                margin-bottom: 20px;
+            }
+
+            .contact form {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="2klogo.jpg" alt="2K Solutions Logo"><!-- Logo image -->
+        </div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Transform Your Career with Expert Software Training</h2>
+        <p>Enhance your skills, earn certifications, and find your dream job in tech with 2K Solutions.</p>
+        <a href="#services" class="cta-btn">Explore Our Services</a>
+    </div>
+</section>
+
+<!-- Founder Information Section -->
+<section id="founder" class="founder">
+    <div class="container">
+        <h2>Meet the Founder</h2>
+        <div class="founder-info">
+            <img src="founder.jpg" alt="Founder Photo" class="founder-photo">
+            <div class="founder-details">
+                <h3>Tukaram (2K)</h3>
+                <p><strong>Founder & CEO of 2K Solutions</strong></p>
+                <p>
+                    Tukaram (2K), the visionary behind **2K Solutions**, is a passionate educator and tech enthusiast who has dedicated his career to empowering individuals with the skills needed to thrive in the tech industry.
+                </p>
+                <p>
+                    Born on 15 June 2000 in the small village of Jainapur, Tukaram pursued his Engineering degree and then worked as a software developer for 1.5 years in top-tier software development companies. During this time, he gained valuable insights into the tech industry and honed his programming and problem-solving skills.
+                </p>
+                <p>
+                    Driven by a passion for teaching, Tukaram transitioned to become a trainer at an international training company, where he worked for nearly two years. This experience allowed him to share his knowledge with aspiring tech professionals and help them build the skills necessary to excel in the fast-paced world of software development.
+                </p>
+                <p>
+                    With the goal of providing comprehensive training, mentorship, and placement support, Tukaram founded **2K Solutions**. His mission is to bridge the gap between education and employment by offering students the tools and resources they need to succeed in their careers.
+                </p>
+                <p>
+                    Under his leadership, **2K Solutions** has grown into a leading educational institute, offering top-tier software training and job placement assistance to individuals seeking to advance their careers in the tech industry.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <center><h2>Our Services</h2></center>
+        <div class="service">
+            <img src="software.jpg" alt="Software Training">
+            <h3>Software Training</h3>
+            <p>Comprehensive training on a variety of software programs, from programming languages to business applications.</p>
+        </div>
+        <div class="service">
+            <img src="placement.jpeg" alt="Placement Assistance">
+            <h3>Placement Assistance</h3>
+            <p>Job-ready support and placement assistance that connects you with top tech companies.</p>
+        </div>
+        <div class="service">
+            <img src="online courses.jpeg" alt="Online Courses">
+            <h3>Online Courses</h3>
+            <p>Learn at your own pace with flexible online courses available for a range of software programs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<center>
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <p>Explore our diverse range of software courses designed to elevate your skills and career.</p>
+            <ul>
+                <li>Software Development</li>
+                <li>Web Development</li>
+                <li>Data Analytics</li>
+                <li>Business Applications</li>
+                <li>Cloud Computing</li>
+            </ul>
+            <a href="#contact" class="cta-btn">Enroll Now</a>
+        </div>
+    </section>
+</center>
+
+<!-- About Us Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>About 2K Solutions</h2>
+        <p>At **2K Solutions**, we specialize in empowering individuals with the skills they need to succeed in the tech industry. Our courses cover everything from software programming to job placement support, providing students with the tools they need to build their careers.</p>
+        <p>We are committed to providing high-quality education, with expert instructors and flexible learning options. Whether you're starting your career or advancing to the next level, we ensure that our students receive the best training and industry insights.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to get started? Reach out to us today!</p>
+        <form action="submit_form.php" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="cta-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 2K Solutions. All Rights Reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
