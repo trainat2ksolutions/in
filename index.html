@@ -1,420 +1,1412 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2K Solutions - Empowering Tech Careers</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f6f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h2, h3 {
-            color: #2c3e50;
-        }
+<title>2K SOLUTIONS | Software Development, Training & Technology</title>
 
-        .cta-btn {
-            padding: 12px 30px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
+<meta name="description" content="2K Solutions provides business software development, web and Android applications, AI and ML solutions, data analytics, technical training and certificate verification.">
 
-        .cta-btn:hover {
-            background-color: #2980b9;
-        }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        /* Navbar Styles */
-        nav {
-            background-color: #34495e;
-            color: #ecf0f1;
-            font-size: 18px;
-            padding: 15px 0;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            color: #ecf0f1;
-            font-size: 24px;
-        }
+<style>
+:root {
+    --primary: #1769c2;
+    --dark: #12385e;
+    --light: #edf6ff;
+    --text: #53677d;
+    --white: #ffffff;
+}
 
-        .navbar-brand img {
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .navbar-nav .nav-link {
-            color: #ecf0f1;
-            padding: 10px 20px;
-        }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
 
-        .navbar-nav .nav-link:hover {
-            color: #3498db;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fbff;
+    color: var(--dark);
+}
 
-        /* Hero Section */
-        .hero {
-            background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 20px;
-            position: relative;
-        }
+a {
+    text-decoration: none;
+}
 
-        .hero-content {
-            z-index: 2;
-        }
+.navbar {
+    background: rgba(255,255,255,.97);
+    padding: 14px 0;
+    box-shadow: 0 3px 20px rgba(20,60,100,.07);
+}
 
-        .hero h2 {
-            font-size: 40px;
-            font-weight: bold;
-        }
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--dark);
+    letter-spacing: -.5px;
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background: var(--primary);
+    color: white;
+    border-radius: 11px;
+    margin-right: 9px;
+    font-weight: 800;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
+.nav-link {
+    color: #52677f;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 12px;
+}
 
-        /* Founder Section */
-        .founder {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            text-align: center;
-        }
+.nav-link:hover {
+    color: var(--primary);
+}
 
-        .founder h2 {
-            font-size: 32px;
-            color: #333;
-            margin-bottom: 20px;
-        }
+.nav-button {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 19px !important;
+    border-radius: 8px;
+}
 
-        .founder-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+/* HERO */
 
-        .founder-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 20%, #d4eaff 0, transparent 30%),
+        linear-gradient(120deg, #edf6ff, #ffffff);
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
 
-        .founder-photo:hover {
-            transform: scale(1.05);
-        }
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
 
-        .founder-details {
-            max-width: 600px;
-        }
+.hero-label {
+    display: inline-block;
+    background: #dceeff;
+    color: #1769c2;
+    border-radius: 30px;
+    padding: 10px 17px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
 
-        .founder-details h3 {
-            font-size: 28px;
-            color: #2c3e50;
-        }
+.hero h1 {
+    color: var(--dark);
+    font-size: clamp(39px, 5.5vw, 65px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
 
-        .founder-details p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-        }
+.hero h1 span {
+    color: var(--primary);
+}
 
-        /* Services Section */
-        .services {
-            padding: 60px 20px;
-            background-color: #ecf0f1;
-            text-align: center;
-        }
+.hero p {
+    max-width: 680px;
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
 
-        .service {
-            margin-bottom: 40px;
-            transition: transform 0.3s ease;
-        }
+.primary-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s;
+}
 
-        .service:hover {
-            transform: translateY(-10px);
-        }
+.primary-btn:hover {
+    background: #104b91;
+    color: white;
+    transform: translateY(-3px);
+}
 
-        .service img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+.outline-btn {
+    display: inline-block;
+    border: 1px solid #b9d2ed;
+    color: var(--dark);
+    padding: 13px 24px;
+    border-radius: 9px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
 
-        /* Courses Section */
-        .courses {
-            padding: 60px 20px;
-        }
+.outline-btn:hover {
+    background: white;
+    color: var(--primary);
+}
 
-        .courses ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+/* COMMON SECTION */
 
-        .courses li {
-            font-size: 18px;
-            color: #555;
-            margin: 10px 30px;
-            padding: 10px 20px;
-            background-color: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.section {
+    padding: 85px 20px;
+}
 
-        .courses li:hover {
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-        }
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
 
-        /* Contact Section */
-        .contact {
-            padding: 60px 20px;
-            background-color: #ffffff;
-        }
+.section-tag {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
 
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.section-heading h2 {
+    color: var(--dark);
+    font-size: clamp(28px, 4vw, 39px);
+    font-weight: 800;
+    margin: 12px 0;
+}
 
-        .contact label {
-            margin-bottom: 5px;
-        }
+.section-heading p {
+    color: var(--text);
+    max-width: 680px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 14px;
+}
 
-        .contact input, .contact textarea {
-            margin-bottom: 20px;
-            padding: 15px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
+/* PROJECTS */
 
-        .contact button {
-            padding: 12px;
-            background-color: #3498db;
-            color: white;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+.projects {
+    background: white;
+}
 
-        .contact button:hover {
-            background-color: #2980b9;
-        }
+.project-card {
+    height: 100%;
+    background: #f7faff;
+    border: 1px solid #e2edf9;
+    padding: 30px 25px;
+    border-radius: 16px;
+    transition: .3s;
+}
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+.project-card:hover {
+    transform: translateY(-7px);
+    background: white;
+    box-shadow: 0 14px 35px rgba(20,70,120,.09);
+    border-color: #bcd7f5;
+}
 
-        footer ul.social-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
+.project-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e1efff;
+    color: var(--primary);
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
 
-        footer ul.social-links li {
-            margin: 0 15px;
-        }
+.project-card h3 {
+    font-size: 19px;
+    color: var(--dark);
+    margin-bottom: 13px;
+}
 
-        footer ul.social-links a {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-        }
+.project-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 90px;
+}
 
-        footer ul.social-links a:hover {
-            color: #3498db;
-        }
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 30px;
-            }
+.project-list li {
+    color: #46617c;
+    font-size: 12px;
+    padding: 7px 0;
+    border-top: 1px solid #e8eff8;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
+.project-list li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: 800;
+    margin-right: 8px;
+}
 
-            .founder-photo {
-                width: 150px;
-                height: 150px;
-            }
+/* BUSINESS CTA */
 
-            .founder-info {
-                flex-direction: column;
-            }
+.business-cta {
+    background: linear-gradient(120deg, #155da9, #123d70);
+    padding: 55px 25px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 45px;
+}
 
-            .service img {
-                width: 100px;
-                height: 100px;
-            }
+.business-cta h3 {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
 
-            .contact form {
-                width: 90%;
-            }
+.business-cta p {
+    color: #d6e8fc;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
 
-            .navbar-nav {
-                text-align: center;
-            }
+.white-btn {
+    display: inline-block;
+    background: white;
+    color: #14569c;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+}
 
-            .navbar-nav .nav-item {
-                margin-bottom: 10px;
-            }
+/* COURSES */
 
-            footer ul.social-links {
-                margin-top: 30px;
-            }
-        }
-    </style>
+.courses {
+    background: #f0f6fd;
+}
+
+.course-card {
+    height: 100%;
+    background: white;
+    border: 1px solid #e4edf8;
+    padding: 25px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(20,70,120,.08);
+}
+
+.course-number {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+.course-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 15px 0;
+}
+
+.course-tech span {
+    background: #eaf3ff;
+    color: #2464a7;
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.course-card .learn-more {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.course-note {
+    text-align: center;
+    color: var(--text);
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+/* TRAINING FEATURES */
+
+.features {
+    background: white;
+}
+
+.feature-card {
+    text-align: center;
+    height: 100%;
+    padding: 28px 20px;
+    border-radius: 14px;
+    background: #f6faff;
+}
+
+.feature-card h4 {
+    color: var(--dark);
+    font-size: 16px;
+    margin: 15px 0 9px;
+}
+
+.feature-card p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.feature-icon {
+    font-size: 28px;
+    color: var(--primary);
+}
+
+/* CORPORATE PROFILE */
+
+.corporate {
+    background: #f1f7ff;
+}
+
+.corporate-card {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(20,70,120,.06);
+}
+
+.msm e-status {
+    display: none;
+}
+
+.registration-status {
+    display: inline-block;
+    background: #e6f7ee;
+    color: #167449;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.corporate-card h3 {
+    font-size: 25px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.corporate-card > p {
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.corporate-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.corporate-item {
+    background: #f5f9ff;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #e5edf7;
+}
+
+.corporate-item small {
+    display: block;
+    color: #8495a8;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: .6px;
+}
+
+.corporate-item strong {
+    color: #244b74;
+    font-size: 14px;
+}
+
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.activity-list span {
+    background: #eaf3ff;
+    color: #225e9e;
+    border-radius: 7px;
+    padding: 9px 13px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* CERTIFICATE */
+
+.verification {
+    background: white;
+}
+
+.verify-card {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(135deg, #edf6ff, #f9fcff);
+    border: 1px solid #dceafa;
+    padding: 55px 30px;
+    border-radius: 20px;
+}
+
+.verify-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #dcecff;
+    color: var(--primary);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 auto 22px;
+}
+
+.verify-card h2 {
+    font-size: 29px;
+    color: var(--dark);
+    margin-bottom: 14px;
+}
+
+.verify-card p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.verify-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.verify-btn:hover {
+    background: var(--dark);
+    color: white;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #f1f7ff;
+}
+
+.contact-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(20,70,120,.06);
+}
+
+.contact-box h2 {
+    color: var(--dark);
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    background: #eaf3ff;
+    color: #1d5e9f;
+    padding: 13px 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* FOOTER */
+
+footer {
+    background: #132f4d;
+    color: white;
+    padding: 45px 20px 20px;
+}
+
+.footer-brand {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 13px;
+}
+
+footer p {
+    color: #bdcde0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+footer h4 {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer li a {
+    color: #bdcde0;
+    font-size: 12px;
+}
+
+footer li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #aebfd2;
+    font-size: 11px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+    .hero {
+        min-height: 520px;
+        padding: 75px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .section {
+        padding: 65px 17px;
+    }
+
+    .corporate-card {
+        padding: 25px 18px;
+    }
+
+    .contact-box {
+        padding: 30px 20px;
+    }
+}
+
+@media(max-width:480px) {
+    .navbar-brand {
+        font-size: 19px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .outline-btn {
+        margin: 12px 0 0;
+    }
+
+    .corporate-details {
+        grid-template-columns: 1fr;
+    }
+
+    .verify-card {
+        padding: 40px 18px;
+    }
+
+    .verify-card h2 {
+        font-size: 24px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-            <img src="2klogo.jpg" alt="Logo" style="width:50px; height:50px; border-radius:50%;">
-          
-      
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="notes.html">Books</a></li>
-                <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg sticky-top">
+<div class="container">
+
+    <a class="navbar-brand" href="#home">
+        <span class="brand-mark">2K</span>
+        2K SOLUTIONS
+    </a>
+
+    <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#corporate">Corporate Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#verification">Certificate Verification</a></li>
+            <li class="nav-item"><a class="nav-link nav-button" href="#contact">Contact Us</a></li>
+        </ul>
     </div>
+
+</div>
 </nav>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
     <div class="hero-content">
-        <h2>Transform Your Career with Expert Software Training</h2>
-        <p>Enhance your skills, earn certifications, and find your dream job in tech with 2K Solutions.</p>
-        <a href="#services" class="cta-btn">Explore Our Services</a>
+
+        <span class="hero-label">
+            SOFTWARE DEVELOPMENT | TECHNICAL EDUCATION
+        </span>
+
+        <h1>
+            Technology That<br>
+            <span>Builds Your Future.</span>
+        </h1>
+
+        <p>
+            2K Solutions provides software development, business technology
+            solutions, practical technical education and project development.
+            We help businesses build digital solutions and help students
+            develop skills for the technology industry.
+        </p>
+
+        <a href="#projects" class="primary-btn">
+            Explore Project Solutions →
+        </a>
+
+        <a href="#courses" class="outline-btn">
+            Explore Courses
+        </a>
+
     </div>
+</div>
 </section>
 
-<!-- Founder Information Section -->
-<section id="founder" class="founder">
-    <h2>Meet the Founder</h2>
-    <div class="founder-info">
-        <img src="founder.jpg" alt="Founder Photo" class="founder-photo">
-        <div class="founder-details">
-            <h3>Tukaram (2K)</h3>
-            <p><strong>Founder & CEO of 2K Solutions</strong></p>
-            <p>...</p> <!-- Existing content goes here -->
-        </div>
+
+<!-- PROJECT DEVELOPMENT -->
+<section class="projects section" id="projects">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="section-tag">Business Technology Solutions</span>
+        <h2>Project Development</h2>
+        <p>
+            We develop customized software solutions for businesses,
+            institutions, startups and organizations to improve their
+            operations, productivity and digital presence.
+        </p>
     </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <div class="project-icon">&lt;/&gt;</div>
+                <h3>Web Application Development</h3>
+                <p>
+                    Responsive websites, business portals and web-based
+                    management systems designed around organizational needs.
+                </p>
+                <ul class="project-list">
+                    <li>Business and corporate websites</li>
+                    <li>Management dashboards and portals</li>
+                    <li>Inventory and billing systems</li>
+                    <li>Student and employee management</li>
+                    <li>Database-driven applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <div class="project-icon">APP</div>
+                <h3>Android Application Development</h3>
+                <p>
+                    Android applications for businesses, institutions
+                    and service providers with useful features and
+                    database connectivity.
+                </p>
+                <ul class="project-list">
+                    <li>Business mobile applications</li>
+                    <li>Attendance and tracking applications</li>
+                    <li>Customer and service applications</li>
+                    <li>Database integration</li>
+                    <li>Application maintenance</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <div class="project-icon">AI</div>
+                <h3>Artificial Intelligence & ML</h3>
+                <p>
+                    Intelligent software solutions using data,
+                    machine learning models and automation
+                    for business applications.
+                </p>
+                <ul class="project-list">
+                    <li>Predictive analytics</li>
+                    <li>Machine learning applications</li>
+                    <li>Data-based recommendation systems</li>
+                    <li>AI-powered business tools</li>
+                    <li>Process automation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <div class="project-icon">DA</div>
+                <h3>Data Analytics & Visualization</h3>
+                <p>
+                    Convert business data into meaningful reports,
+                    dashboards and insights to support
+                    better decision-making.
+                </p>
+                <ul class="project-list">
+                    <li>Business data analysis</li>
+                    <li>Interactive dashboards</li>
+                    <li>Excel reporting and automation</li>
+                    <li>Python data analysis</li>
+                    <li>Data visualization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <div class="project-icon">DB</div>
+                <h3>Database & Business Software</h3>
+                <p>
+                    Customized software and database systems
+                    that help organizations manage information
+                    and everyday operations.
+                </p>
+                <ul class="project-list">
+                    <li>Database design and development</li>
+                    <li>Record management systems</li>
+                    <li>Reports and data management</li>
+                    <li>Workflow applications</li>
+                    <li>Software integration</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+                <div class="project-icon">☁</div>
+                <h3>Cloud & Technical Solutions</h3>
+                <p>
+                    Hosting, deployment and technical services
+                    to support the development and operation
+                    of digital applications.
+                </p>
+                <ul class="project-list">
+                    <li>Cloud deployment and hosting</li>
+                    <li>Website deployment</li>
+                    <li>AWS-related solutions</li>
+                    <li>Technical support and maintenance</li>
+                    <li>Application deployment assistance</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="business-cta">
+        <h3>Have a Business Project in Mind?</h3>
+        <p>
+            Discuss your requirements with 2K Solutions.
+            We can help plan and develop a suitable technology solution.
+        </p>
+        <a href="https://wa.me/919535795479" class="white-btn">
+            Discuss Your Project →
+        </a>
+    </div>
+
+</div>
 </section>
 
-<!-- Services Section -->
-<center>
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <img src="software.jpg" alt="Software Training">
-            <h3>Software Training</h3>
-            <p>Comprehensive training on a variety of software programs, from programming languages to business applications.</p>
-        </div>
-        <div class="service">
-            <img src="placement.jpeg" alt="Placement Assistance">
-            <h3>Placement Assistance</h3>
-            <p>Job-ready support and placement assistance that connects you with top tech companies.</p>
-        </div>
-        <div class="service">
-            <img src="online_courses.jpeg" alt="Online Courses">
-            <h3>Online Courses</h3>
-            <p>Learn at your own pace with flexible online courses available for a range of software programs.</p>
-        </div>
-    </section>
-</center>
 
-<!-- Courses Section -->
-<center>
-    <section id="courses" class="courses">
-        <h2>Our Courses</h2>
-        <ul>
-            <li>Software Development</li>
-            <li>Web Development</li>
-            <li>Data Analytics</li>
-            <li>Business Applications</li>
-            <li>Cloud Computing</li>
-        </ul>
-        <a href="#contact" class="cta-btn">Enroll Now</a>
-    </section>
-    
-</center>
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form action="submit_form.php" method="post">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
+<!-- COURSES -->
+<section class="courses section" id="courses">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="section-tag">Technical Education</span>
+        <h2>Professional Training Courses</h2>
+        <p>
+            Develop practical technical skills through structured
+            learning, programming exercises, assignments and
+            real-world project development.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 01</div>
+                <h3>Full Stack Web Development</h3>
+                <p>
+                    Learn to design, develop and deploy responsive
+                    websites and database-driven web applications.
+                </p>
+                <div class="course-tech">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    <span>Bootstrap</span><span>Python Flask</span>
+                    <span>MySQL</span><span>MongoDB</span><span>Git & GitHub</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 02</div>
+                <h3>Android App Development</h3>
+                <p>
+                    Build Android applications and learn mobile
+                    application design, programming and database
+                    integration.
+                </p>
+                <div class="course-tech">
+                    <span>Java</span><span>Android Studio</span>
+                    <span>XML</span><span>SQLite</span>
+                    <span>Firebase Concepts</span><span>API Integration</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 03</div>
+                <h3>Python Programming</h3>
+                <p>
+                    Learn programming fundamentals, problem-solving,
+                    functions, file handling and application development
+                    using Python.
+                </p>
+                <div class="course-tech">
+                    <span>Python</span><span>OOP</span>
+                    <span>Functions</span><span>File Handling</span>
+                    <span>SQLite</span><span>Flask Basics</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 04</div>
+                <h3>Data Science</h3>
+                <p>
+                    Understand data processing, statistical concepts,
+                    exploratory data analysis and predictive modelling.
+                </p>
+                <div class="course-tech">
+                    <span>Python</span><span>NumPy</span><span>Pandas</span>
+                    <span>Matplotlib</span><span>Seaborn</span>
+                    <span>SciPy</span><span>Scikit-learn</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 05</div>
+                <h3>Data Analytics</h3>
+                <p>
+                    Learn how to collect, clean, analyze and visualize
+                    data to generate meaningful business insights.
+                </p>
+                <div class="course-tech">
+                    <span>Advanced Excel</span><span>SQL</span>
+                    <span>Python</span><span>Pandas</span>
+                    <span>Power BI Concepts</span><span>Dashboards</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 06</div>
+                <h3>Artificial Intelligence & ML</h3>
+                <p>
+                    Understand AI and machine learning concepts
+                    and develop practical predictive and
+                    intelligent applications.
+                </p>
+                <div class="course-tech">
+                    <span>Python</span><span>NumPy</span>
+                    <span>Pandas</span><span>Scikit-learn</span>
+                    <span>TensorFlow</span><span>Model Evaluation</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 07</div>
+                <h3>Embedded Systems & C</h3>
+                <p>
+                    Learn C programming fundamentals and understand
+                    embedded system concepts and hardware-oriented
+                    programming.
+                </p>
+                <div class="course-tech">
+                    <span>C Programming</span><span>Microcontrollers</span>
+                    <span>Embedded Concepts</span><span>Hardware Basics</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 08</div>
+                <h3>Cloud Computing & AWS</h3>
+                <p>
+                    Understand cloud fundamentals, hosting,
+                    application deployment and cloud infrastructure
+                    concepts.
+                </p>
+                <div class="course-tech">
+                    <span>Cloud Concepts</span><span>AWS</span>
+                    <span>Hosting</span><span>Deployment</span>
+                    <span>Web Servers</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+                <div class="course-number">COURSE 09</div>
+                <h3>Computer & Business Applications</h3>
+                <p>
+                    Develop essential digital office skills for
+                    academic, administrative and business environments.
+                </p>
+                <div class="course-tech">
+                    <span>MS Word</span><span>MS Excel</span>
+                    <span>PowerPoint</span><span>Tally</span>
+                    <span>Canva</span><span>Computer Operations</span>
+                </div>
+                <a href="#contact" class="learn-more">Enquire About Course →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="course-note">
+        Course syllabus, batch schedules, duration and fees are
+        available on enquiry. Training content may be customized
+        according to the course and learner requirements.
+    </p>
+
+</div>
 </section>
 
-<!-- Footer -->
+
+<!-- TRAINING BENEFITS -->
+<section class="features section">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="section-tag">Learning Approach</span>
+        <h2>More Than Just Training</h2>
+        <p>
+            Focus on practical knowledge, project experience
+            and professional development.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-6">
+            <div class="feature-card">
+                <div class="feature-icon">⌨</div>
+                <h4>Practical Learning</h4>
+                <p>Hands-on coding and technology exercises.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="feature-card">
+                <div class="feature-icon">▣</div>
+                <h4>Project Development</h4>
+                <p>Build applications and work on practical projects.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="feature-card">
+                <div class="feature-icon">◎</div>
+                <h4>Career Preparation</h4>
+                <p>Resume, interview and professional skill guidance.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="feature-card">
+                <div class="feature-icon">↗</div>
+                <h4>Technical Guidance</h4>
+                <p>Support in learning modern industry technologies.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+<!-- CORPORATE PROFILE -->
+<section class="corporate section" id="corporate">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="section-tag">Official Business Information</span>
+        <h2>Corporate Profile</h2>
+        <p>
+            Learn about the business activities, registration
+            and technology services of 2K Solutions.
+        </p>
+    </div>
+
+    <div class="corporate-card">
+
+        <div class="registration-status">
+            ✓ MSME REGISTERED – GOVERNMENT OF INDIA
+        </div>
+
+        <h3>2K SOLUTIONS</h3>
+
+        <p>
+            2K Solutions is an MSME-registered proprietorship
+            enterprise engaged in software development, technical
+            education, IT training, project development and
+            technology-related services.
+
+            The organization focuses on developing practical
+            digital solutions for businesses and providing
+            technology education and skill development
+            opportunities for students.
+        </p>
+
+        <div class="corporate-details">
+
+            <div class="corporate-item">
+                <small>Business Name</small>
+                <strong>2K Solutions</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Business Constitution</small>
+                <strong>Proprietorship</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Registration Status</small>
+                <strong>MSME Registered</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Registration Authority</small>
+                <strong>Government of India</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Date of MSME Registration</small>
+                <strong>07 July 2024</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Business Location</small>
+                <strong>Jamkhandi, Karnataka, India</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Industry</small>
+                <strong>IT, Software & Technical Education</strong>
+            </div>
+
+            <div class="corporate-item">
+                <small>Website</small>
+                <strong>www.2ksolutions.in</strong>
+            </div>
+
+        </div>
+
+        <h4 style="font-size:17px; margin-top:30px; color:#173b60;">
+            Registered Business Activities
+        </h4>
+
+        <div class="activity-list">
+            <span>Software Programming</span>
+            <span>Software Support & Maintenance</span>
+            <span>Educational Support Services</span>
+            <span>Technical & Vocational Education</span>
+            <span>Employment Placement Services</span>
+            <span>Web Portals & Data Processing</span>
+            <span>Software Development</span>
+            <span>Technical Training</span>
+        </div>
+
+        <h4 style="font-size:17px; margin-top:30px; color:#173b60;">
+            Business Service Areas
+        </h4>
+
+        <p style="margin-top:12px;">
+            Web and Android application development, AI and
+            machine learning, data science, data analytics,
+            embedded systems, cloud services, software
+            consultancy, project development, internships,
+            workshops and technical education.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- CERTIFICATE VERIFICATION -->
+<section class="verification section" id="verification">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="section-tag">Certificate Authentication</span>
+        <h2>Certificate Verification</h2>
+        <p>
+            Verify certificates issued by 2K Solutions through
+            the official certificate verification portal.
+        </p>
+    </div>
+
+    <div class="verify-card">
+
+        <div class="verify-icon">✓</div>
+
+        <h2>Verify Your Certificate</h2>
+
+        <p>
+            Students, institutions and organizations can use
+            the certificate verification facility to check
+            the authenticity of certificates issued by
+            2K Solutions.
+        </p>
+
+        <!-- REPLACE THE LINK BELOW WITH YOUR VERIFICATION PAGE URL -->
+
+        <a href="check.html"
+           class="verify-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            Verify Certificate →
+        </a>
+
+        <p style="font-size:11px; margin-top:18px; margin-bottom:0;">
+            Official certificate verification facility of 2K Solutions.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+<div class="container">
+
+    <div class="contact-box">
+
+        <span class="section-tag">Get In Touch</span>
+
+        <h2>Let's Build Something Together</h2>
+
+        <p>
+            Looking for a software development partner?
+            Interested in technical training or project development?
+            Contact 2K Solutions to discuss your requirements.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="tel:+919535795479">
+                ☎ +91 9535795479
+            </a>
+
+            <a href="mailto:trainat2ksolutions@gmail.com">
+                ✉ Email 2K Solutions
+            </a>
+
+            <a href="https://wa.me/919535795479" target="_blank" rel="noopener noreferrer">
+                WhatsApp Us
+            </a>
+
+        </div>
+
+        <p style="margin-top:25px; margin-bottom:0;">
+            Jamkhandi, Karnataka – 587301, India
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
 <footer>
-    <p>&copy; 2024 2K Solutions. All Rights Reserved.</p>
-    <ul class="social-links">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Instagram</a></li>
-    </ul>
+<div class="container">
+
+    <div class="row g-4">
+
+        <div class="col-lg-6">
+            <div class="footer-brand">2K SOLUTIONS</div>
+            <p>
+                Software Development, Training and Placement.
+                Building technology solutions for businesses
+                and developing technical skills for the future.
+            </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#projects">Project Development</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#corporate">Corporate Profile</a></li>
+                <li><a href="#verification">Certificate Verification</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <h4>Contact Information</h4>
+            <ul>
+                <li><a href="tel:+919535795479">+91 9535795479</a></li>
+                <li><a href="mailto:trainat2ksolutions@gmail.com">Email Us</a></li>
+                <li><a href="https://share.google/a8y18AJCzw6j18UAI">Google Business</a></li>
+                <li><a href="https://www.instagram.com/_2k_solutions/">Instagram</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 2K SOLUTIONS. All Rights Reserved.
+        | MSME Registered Enterprise – Government of India
+    </div>
+
+</div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
