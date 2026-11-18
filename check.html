@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Portal | 2K Solutions</title>
+<meta name="description" content="2K Solutions Student Information Portal">
+
+<style>
+:root {
+    --primary: #1d4ed8;
+    --primary-hover: #1e40af;
+    --primary-soft: #dbeafe;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --bg-light-blue: linear-gradient(135deg, #bae6fd 0%, #e0f2fe 50%, #dbeafe 100%);
+    --surface: rgba(255, 255, 255, 0.92);
+    --border-light: rgba(147, 197, 253, 0.5);
+    --shadow-card: 0 20px 40px -15px rgba(29, 78, 216, 0.15), 0 4px 12px -2px rgba(29, 78, 216, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg-light-blue);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 16px;
+}
+
+/* Top Navigation Bar */
+header {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px -6px rgba(29, 78, 216, 0.1);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 19px;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.header-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 8px 18px;
+    background: var(--primary-soft);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.header-link:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 16px 0 32px;
+}
+
+.hero .tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #ffffff;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50px;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(29, 78, 216, 0.08);
+    border: 1px solid var(--border-light);
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.8px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* Search Card */
+.search-card {
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    max-width: 620px;
+    margin: 0 auto 28px;
+    padding: 36px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid #ffffff;
+}
+
+.search-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 54px;
+    padding: 0 18px;
+    border: 2px solid #cbd5e1;
+    border-radius: 14px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    background: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.12);
+}
+
+.search-box button {
+    height: 54px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 8px 18px -4px rgba(29, 78, 216, 0.4);
+}
+
+.search-box button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px -4px rgba(29, 78, 216, 0.5);
+}
+
+.search-box button:active {
+    transform: translateY(0);
+}
+
+.search-box button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.search-card .hint {
+    color: var(--text-muted);
+    text-align: left;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* Status Messages */
+.message {
+    text-align: center;
+    margin-top: 18px;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.message:empty {
+    display: none;
+}
+
+.message.success {
+    color: #065f46;
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+}
+
+.message.error {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+/* Student Result Card */
+.result-card {
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    max-width: 620px;
+    margin: 28px auto;
+    padding: 36px;
+    border-radius: 24px;
+    border: 1px solid #ffffff;
+    box-shadow: var(--shadow-card);
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.result-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1.5px solid #e2e8f0;
+    padding-bottom: 18px;
+}
+
+.small-label {
+    display: block;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.result-card h2 {
+    color: var(--text-dark);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.verified {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    border: 1px solid #86efac;
+}
+
+/* Student Details Grid */
+.profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.profile-item {
+    background: #f0f9ff;
+    padding: 18px 20px;
+    border-radius: 16px;
+    border: 1px solid #bae6fd;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px -4px rgba(2, 132, 199, 0.12);
+}
+
+.profile-item span {
+    display: block;
+    color: #0369a1;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+}
+
+.profile-item strong {
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.footer-note {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 16px;
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Contact Support Card */
+.contact-section {
+    text-align: center;
+    max-width: 620px;
+    margin: 32px auto 24px;
+    padding: 26px 24px;
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -8px rgba(29, 78, 216, 0.12);
+}
+
+.contact-section h3 {
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.contact-section p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.contact-section a {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--primary-soft);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.contact-section a:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px 10px 8px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+footer p + p {
+    margin-top: 4px;
+}
+
+footer > a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframes */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 14px 12px;
+    }
+
+    header {
+        padding: 12px 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        margin: 10px 0 24px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 14.5px;
+    }
+
+    .search-card {
+        padding: 24px 18px;
+        border-radius: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+        height: 50px;
+    }
+
+    .result-card {
+        padding: 24px 18px;
+        border-radius: 20px;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-section {
+        margin-top: 24px;
+        padding: 22px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+
+<main class="container">
+
+    <section class="hero">
+        <div class="tag">
+            2K SOLUTIONS
+        </div>
+
+        <h1>Certificate Information Portal</h1>
+
+        <p>
+            Search and Verify certificate information
+            Using Registered 2K Student ID.
+        </p>
+    </section>
+
+    <section class="search-card">
+        <label for="studentId">
+            Enter 2K ID
+        </label>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="studentId"
+                placeholder="Example: FY2026I01"
+                autocomplete="off"
+            >
+
+            <button id="searchBtn" onclick="searchStudent()">
+                Search Student
+            </button>
+        </div>
+
+        <p class="hint">
+            Please enter your correct registered 2K ID.
+        </p>
+
+        <div id="message" class="message"></div>
+    </section>
+
+    <section id="resultCard" class="result-card hidden">
+        <div class="result-heading">
+            <div>
+                <span class="small-label">
+                    INTERN PROFILE
+                </span>
+                <h2>INTERN INFORMATION</h2>
+            </div>
+
+            <span class="verified">
+                ✓ Verified
+            </span>
+        </div>
+
+        <div class="profile">
+            <div class="profile-item">
+                <span>Name</span>
+                <strong id="studentName">-</strong>
+            </div>
+
+            <div class="profile-item">
+                <span>2K ID</span>
+                <strong id="displayId">-</strong>
+            </div>
+
+            <div class="profile-item">
+                <span>Mobile Number</span>
+                <strong id="mobile">-</strong>
+            </div>
+
+            <div class="profile-item">
+                <span>Email Address</span>
+                <strong id="email">-</strong>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Intern information retrieved securely from the
+            2K Solutions database.
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="contact-section">
+        <h3>Need Assistance?</h3>
+        <p>For Intern ID verification support, contact 2K Solutions.</p>
+        <a href="tel:9535795479">📞 9535795479</a>
+    </div>
+
+    <p>© 2026 2K Solutions. All Rights Reserved.</p>
+
+    <p>
+        Software Development | Training | Placement
+    </p>
+
+    <a href="https://www.2ksolutions.in">
+        www.2ksolutions.in
+    </a>
+</footer>
+
+<script>
+    // GOOGLE APPS SCRIPT API URL
+    const API_URL =
+    "https://script.google.com/macros/s/AKfycbyTOKZUfVStpGRi7j7r_KW9Wg5zBYD8ZAZA-ppxf5xEwcLy7aDFgWADMU31PKbwQj4NRA/exec";
+
+
+    function searchStudent() {
+
+        const studentId =
+            document.getElementById("studentId").value.trim();
+
+        const message =
+            document.getElementById("message");
+
+        const resultCard =
+            document.getElementById("resultCard");
+
+        const searchBtn =
+            document.getElementById("searchBtn");
+
+        resultCard.classList.add("hidden");
+
+        message.textContent = "";
+
+        if (!studentId) {
+
+            message.textContent =
+                "Please enter your correct registered 2K ID.";
+
+            message.className = "message error";
+
+            return;
+        }
+
+        searchBtn.disabled = true;
+
+        searchBtn.textContent = "Searching...";
+
+        const callbackName =
+            "studentCallback_" + Date.now() + "_" +
+            Math.floor(Math.random() * 100000);
+
+        const script = document.createElement("script");
+
+        let completed = false;
+
+        function cleanup() {
+
+            completed = true;
+
+            delete window[callbackName];
+
+            if (script.parentNode) {
+                script.parentNode.removeChild(script);
+            }
+
+            searchBtn.disabled = false;
+
+            searchBtn.textContent = "Search Student";
+        }
+
+        window[callbackName] = function(data) {
+
+            cleanup();
+
+            if (data.success && data.student) {
+
+                const student = data.student;
+
+                document.getElementById("studentName").textContent =
+                    student.name || "-";
+
+                document.getElementById("displayId").textContent =
+                    student.id || "-";
+
+                document.getElementById("mobile").textContent =
+                    student.mobile || student.mobileNumber || "-";
+
+                document.getElementById("email").textContent =
+                    student.email || student.emailAddress || "-";
+
+                resultCard.classList.remove("hidden");
+
+                message.textContent =
+                    "Intern found successfully!";
+
+                message.className = "message success";
+
+            } else {
+
+                message.textContent =
+                    data.message || "Intern not found.";
+
+                message.className = "message error";
+            }
+        };
+
+        script.onerror = function() {
+
+            if (!completed) {
+
+                cleanup();
+
+                message.textContent =
+                    "Unable to connect to the student database. Please try again.";
+
+                message.className = "message error";
+            }
+        };
+
+        const separator =
+            API_URL.includes("?") ? "&" : "?";
+
+        script.src =
+            API_URL +
+            separator +
+            "id=" + encodeURIComponent(studentId) +
+            "&callback=" + encodeURIComponent(callbackName);
+
+        document.body.appendChild(script);
+    }
+
+
+    // ENTER KEY SEARCH
+    document.getElementById("studentId")
+        .addEventListener("keydown", function(event) {
+
+            if (event.key === "Enter") {
+                searchStudent();
+            }
+
+        });
+
+</script>
+
+</body>
+</html>
